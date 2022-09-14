@@ -27,7 +27,7 @@ export const GifsApp = () => {
       {/* Listado de Gifs */}
 
       {
-        categories.map((category)=>(
+        categories.map((category)=>( //Se repite dependiendo de la cantidad de categorias
 
           <GifGrid key={category} category={category}/>
 
