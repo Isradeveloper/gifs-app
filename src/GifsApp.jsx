@@ -18,6 +18,7 @@ export const GifsApp = () => {
     <>
       {/* Titulo */}
       <h1>GifsApp</h1>
+      <h1 className="autor">Developed by Isra Trujillo</h1>
 
       {/* Input */}
       <AddCategory
