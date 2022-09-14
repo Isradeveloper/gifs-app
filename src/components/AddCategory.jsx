@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 
-export const AddCategory = ({setCategories}) => {
+export const AddCategory = ({onNewCategory}) => {
 
   const [inputValue, setInputValue] = useState('') // Utilizamos useState para tener la informacion del input en el html
 
@@ -16,7 +16,8 @@ export const AddCategory = ({setCategories}) => {
   const onSubmit = (event)=>{
     event.preventDefault() // Evitamos que se reinicie la pagina
     if (inputValue.trim().length <=1) return // Solo se ejecuta si tenemos mas de 1 letra
-    setCategories((categories)=>[inputValue, ...categories]) //El set tiene un callback del dato anterior
+    // setCategories((categories)=>[inputValue, ...categories]) //El set tiene un callback del dato anterior
+    onNewCategory(inputValue.trim())
     setInputValue("")
   }
 
