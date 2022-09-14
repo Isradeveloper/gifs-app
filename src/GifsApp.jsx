@@ -7,6 +7,9 @@ export const GifsApp = () => {
   const [categories, setCategories] = useState(['One piece', 'Cristiano Ronaldo'])
 
   const onAddCategory = (newCategory) => {
+
+    if(categories.includes(newCategory))return
+
     setCategories([newCategory, ...categories])
   }
 
@@ -23,7 +26,7 @@ export const GifsApp = () => {
 
       {/* Listado de Gifs */}
       <ol>
-        {categories.map(category => { //Generamos los li con .map
+        {categories.map((category) => { //Generamos los li con .map
           return <li key={category}>{category}</li> //Cuando generamos elementos dinamicos debemos usar keys
         })}
       </ol>
