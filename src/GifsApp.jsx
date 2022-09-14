@@ -5,7 +5,7 @@ import { GifGrid } from './components/GifGrid'
 export const GifsApp = () => {
 
   //Cuando queremos guardar información y esa información cambia el HTML usamos hook useState
-  const [categories, setCategories] = useState(['One piece', 'Cristiano Ronaldo'])
+  const [categories, setCategories] = useState(['One piece'])
 
   const onAddCategory = (newCategory) => {
 
@@ -25,7 +25,7 @@ export const GifsApp = () => {
       />
 
       {/* Listado de Gifs */}
-      
+
       {
         categories.map((category)=>(
 
