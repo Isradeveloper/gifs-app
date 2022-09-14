@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { AddCategory } from './components/AddCategory'
+import { GifGrid } from './components/GifGrid'
 
 export const GifsApp = () => {
 
@@ -8,9 +9,9 @@ export const GifsApp = () => {
 
   const onAddCategory = (newCategory) => {
 
-    if(categories.includes(newCategory))return
-
+    if (categories.includes(newCategory)) return
     setCategories([newCategory, ...categories])
+
   }
 
   return (
@@ -20,18 +21,20 @@ export const GifsApp = () => {
 
       {/* Input */}
       <AddCategory
-        // setCategories = {setCategories} categories={categories}
         onNewCategory={(event) => onAddCategory(event)}
       />
 
       {/* Listado de Gifs */}
-      <ol>
-        {categories.map((category) => { //Generamos los li con .map
-          return <li key={category}>{category}</li> //Cuando generamos elementos dinamicos debemos usar keys
-        })}
-      </ol>
+      
+      {
+        categories.map((category)=>(
 
-      {/* Gif item */}
+          <GifGrid key={category} category={category}/>
+
+        ))
+      }
+        
+
     </>
   )
 }
