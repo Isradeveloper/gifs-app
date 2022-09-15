@@ -9,7 +9,7 @@ export const GifsApp = () => {
   const onAddCategory = (newCategory) => {
 
     if (categories.includes(newCategory)) return
-    setCategories([newCategory, ...categories])
+    setCategories([newCategory,...categories])
 
   }
 
