@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import {AddCategory, GifGrid} from './components'
 
+
 export const GifsApp = () => {
 
   //Cuando queremos guardar información y esa información cambia el HTML usamos hook useState
@@ -38,3 +39,5 @@ export const GifsApp = () => {
     </>
   )
 }
+
+
