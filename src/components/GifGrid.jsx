@@ -16,7 +16,7 @@ export const GifGrid = ({ category }) => {
         {
           images.map((image) => (
             <GifItem key={image.id}
-              {...image}
+              {...image} // Pasa todos los atributos de image
             />
           ))
         }
